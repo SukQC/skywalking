@@ -187,7 +187,7 @@ as the version number, it will be changed in the test for every version.
 
 **Take following test cases as examples**
 * [dubbo-2.7.x with JVM-container](../../../test/plugin/scenarios/dubbo-2.7.x-scenario/configuration.yml)
-* [jetty with Tomcat-container](../../../test/plugin/scenarios/jetty-scenario/configuration.yml)
+* [jetty with JVM-container](../../../test/plugin/scenarios/jetty-scenario/configuration.yml)
 * [gateway with runningMode](../../../test/plugin/scenarios/gateway-scenario/configuration.yml)
 * [canal with docker-compose](../../../test/plugin/scenarios/canal-scenario/configuration.yml)
 
@@ -630,12 +630,14 @@ canal 1.0.24-1.1.2 | 5 | 214.05
 
 
 ### Workload 2
-#### Group 1 (2351.54s)
+#### Group 1 (3936.54s)
 scenario name | versions | elapsed time (sec)
 ---|---|---
+spring-tx 4.x+ | 10 | 555.00
 spring 4.3.x-5.2.x | 54 | 1769.32
 dubbo 2.5.x-2.6.x | 10 | 367.23
 dubbo 2.7.x | 4 | 214.99
+okhttp 3.0.x-3.14.x | 34 | 1030
 
 #### Group 2 (2550.66s)
 scenario name | versions | elapsed time (sec)
@@ -647,9 +649,10 @@ elasticsearch 5.x | 3 | 142.15
 
 
 ### Workload 3
-#### Group 1 (2291.912s)
+#### Group 1 (3090.912s)
 scenario name | versions | elapsed time (sec)
 ---|---|---
+hystrix-scenario | 20 | 799.00
 postgresql 9.2.x-9.4.x | 36 | 1243.03
 sofarpc 5.4.0-5.6.2 | 23 | 817.77
 spring 3.0.x | 8 | 231.11
@@ -659,6 +662,7 @@ scenario name | versions | elapsed time (sec)
 ---|---|---
 spring async 4.3.x-5.1.x | 35 | 967.70
 mongodb 3.4.0-3.11.1 | 17 | 1465.63
+grcp 1.6.0-1.25.0 | 25 | 627.00
 
 ### Workload 4
 #### Group 1 (2463.00s)
